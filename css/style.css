@@ -11,16 +11,9 @@ body{
 }
 
   
-}
 
-.nom{
-  font-size: 50px; 
-  align: center;
-}
-.portafoli{
-  font-size: 25px; 
-  align: center;
-}
+
+
 .barres{
 width: 75%;
 background-color:grey ;
@@ -41,54 +34,8 @@ a{
 
 
 }
-.Parag1{
 
-  display: flex;
-  border: 2px solid white;
-  border-radius: 12px;
-  flex-wrap: wrap;
-  padding: 18px;
-  padding-top: 30px; 
-  margin-bottom:10px;   
 
-}
-.linea1{
-  font-size: 20px;
-  margin: 3px;
-  text-align: auto;
-  line-height: 1.2; 
-  word-spacing: 6px;
-  color: #FFFF00;
-  letter-spacing: 1px;
-}
-.linea2{
-  font-family: 'Red Hat Text', sans-serif;
-  color: #fefe22;
-  margin: 15px;
-  text-align: auto;
-  font-size: 23px;
-  line-height: 1.2;  
-}
-
-.linea3{
-font-family: 'Red Hat Text', sans-serif;
-  text-align: auto;
-  font-size: 16px;
-  color: white;
-  line-height: 2.2;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.Parag2{
- border: 2px solid white;
- border-radius: 12px;
- flex-wrap: wrap;
- padding: 18px;
- padding-top: 30px;
- margin-left: auto;
- margin-right: auto;
-}
 
 .relleno{
   border: 3px solid #000080;
