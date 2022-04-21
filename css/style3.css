@@ -15,12 +15,9 @@ body{
 
 .nom{
   font-size: 50px; 
-  align: center;
+  
 }
-.portafoli{
-  font-size: 25px; 
-  align: center;
-}
+
 .barres{
 width: 100%;
 background-color:grey ;
@@ -42,13 +39,6 @@ a{
 
 }
 
-.relleno{
-  border: 3px solid #000080;
-  height: 25px;
-}
-.logos{
-padding: 50px;
-}
 
 a:hover{
   color: blue;
@@ -69,22 +59,17 @@ h2{
   padding-top: 50px;
 }
 
-.contenidor2 {
+.contenidorformulari {
     border: 2px solid white;
     border-radius: 12px;
-    flex-wrap: wrap;
     padding: 12px;
-    display: flex;
-    text-align: center;
-}
-.contenidor{
-    max-width: 960px;
-    min-width: 320px;
+    align-items: center;
+    
 }
 
 .lletra{
 color: white;
-text-align: left;
+
 }
 .programes{
 color: white;
@@ -100,4 +85,5 @@ padding: 5px;
 .lletra2{
   text-align: center;
   color: white;
+   align-items: center;
 }

@@ -1,7 +1,7 @@
 body{
   background-color: #292C34;
   text-align: center;
-  font-family: 'Baloo Bhaijaan 2', cursive;
+  font-family: 'Roboto Condensed', sans-serif;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -22,7 +22,7 @@ body{
   align: center;
 }
 .barres{
-width: 65%;
+width: 75%;
 background-color:grey ;
 border-color: grey;
 

@@ -1,0 +1,2758 @@
+/* @group General styles */
+
+/*
+Resets styles then adds basic typographical styling
+By Mark Wallis, markwallis.ie
+*/
+
+/* @group Reset */
+
+/* Based on http://meyerweb.com/eric/tools/css/reset/ */
+applet, object, iframe, blockquote, pre, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+.bullets{
+	list-style-type:circle;
+	margin-top: 0;
+    border-top-width: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    border-bottom-width: 0;
+    padding-bottom: 0;
+}
+.bullets-li{
+	margin-top: 0;
+    border-top-width: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    border-bottom-width: 0;
+    padding-bottom: 0;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+/* tables may still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* @end Reset */
+
+/* @group Font sizes */
+
+/* basic font sizes */
+p, ul, ol, dl, table, address, blockquote, fieldset, pre, form div {
+	font-size: 1em;  /* 12px */
+}
+
+/* deal with likely (but certainly not all) inherited shrinkage */
+ul p, ol p, table p, dl p, ul ul, ol ol, ul ol, ol ul, address p, blockquote p, form div div, form div p, fieldset div, table form div {
+	font-size: 1em;
+}
+
+sup { 
+	font-size: .83em;
+	vertical-align: super;
+}
+
+/* @end Font sizes */
+
+/* @group Margins */
+
+p, ul, ol, dl, address, table, blockquote, pre, fieldset {
+	margin-bottom: 1em; /* 12px */
+}
+form {
+}
+ul ul, ol ol, ol ul, ul ol {
+	margin-bottom: 0;
+}
+
+/* @end Margins */
+
+/* @group Links */
+
+a {
+
+}
+a:visited {
+}
+a:hover,
+a:active,
+a:focus {
+	text-decoration: underline;
+}
+
+/* @end Links */
+
+/* @group Headings */
+
+h1 {
+	font-size: 24px;
+    line-height: 2em; 			/* 48px */
+	margin-top: 0;
+	margin-bottom: 15px;
+    color: #103253;	
+	font-weight: normal;
+	border-bottom: 1px solid #efefef;
+}
+
+h2 {
+	font-size: 18px;
+    color: #103253;
+	font-weight: normal;
+}
+h3 {
+	font-size: 1.2857em;
+	color: #103253;
+}
+h4, h5, h6 {
+	color: #103253;
+	font-size: 12px;
+}
+
+/* @end Headings */
+
+/* @group Lists */
+
+.prose ul, ul.bullets, ul.bullets ul {	/* unordered lists more often DON'T require bullets except in extended bits of writing - use the .prose class or apply directly with .bullets */
+	list-style-type: disc;
+	margin-left: 1.5em; /* 18px */
+}
+.bullets li {
+	margin-top: 1em;			/*  12px */
+	margin-bottom: 1.5em;		/* 18px */
+}
+
+ol {
+}
+
+dt {
+	color: #103253;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+dd {
+	margin-bottom: 20px;
+}
+
+/* @end Lists */
+
+/* @group Tables */
+
+table {
+}
+
+caption {
+}
+
+thead th {
+}
+
+tbody {
+}
+
+tbody tr th,
+tbody tr td {
+}
+
+th,
+td {
+}
+
+/* @end Tables */
+
+/* @end General styles*/
+
+/* @group Helper styles */
+.container {
+	background: #71386A;
+	padding: 5px 0;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.pull-left {
+	display: block;
+	float: left;
+}
+
+.right-gutter {
+	margin: 0 20px 20px 0;
+}
+
+.outline {
+	padding: 1px;
+	border: 1px solid #ccc;
+}
+
+.pull-right {
+	display: block;
+	float: right;
+}
+
+.top {
+	background: url(../i/top.gif) no-repeat;
+	height: 10px;	
+}
+
+.btm {
+	background: url(../i/btm.gif) no-repeat;
+	height: 10px;	
+}
+
+.col {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.last-col {
+	float: left;
+	margin: 0 0 10px 0;
+}
+
+.span3 {
+	width: 230px;
+}
+
+.span4 {
+	width: 310px;
+}
+
+.notes {
+	text-align: left;
+	font-size:80%;
+}
+
+.notes p {
+	float:left;
+	display:inline;
+	width:30%;
+	margin-right:18px;
+}
+
+.payment {
+	background-color: #efefef;
+	color: #000;
+	font-size: 18px;
+	padding: 20px 10px 20px 70px;
+}
+
+.success {
+	background-image: url(../i/payment-success.gif);
+	background-repeat: no-repeat;
+	background-position: 10px 50%;
+}
+
+.note {
+	background: url(../i/alert.gif) no-repeat 0 50%;
+	color: #666;
+	font-family: Georgia, serif;
+	font-style: italic;
+}
+
+.details {
+	list-style-position: inside;
+}
+
+.details li {
+	margin-bottom: 0.75em;
+}
+
+.clear-thumbnail {
+	float: left;
+	margin-left: 67px;
+}
+
+/* @end Helper styles*/
+
+/* @group Landing */
+
+#landing {
+	background: #fff url(../i/landing-tile.png) repeat-y;
+	width: 630px;
+	margin: 50px auto;
+	text-align: left;
+}
+#landing-top {
+	background:url(../i/landing-top.png) no-repeat;
+	height: 10px;
+	width: 630px;
+}
+#landing-btm {
+	background:url(../i/landing-btm.png) no-repeat;
+	height: 10px;
+	width: 630px;
+}
+
+#landing p {
+	font-size: 24px;
+}
+
+#landing form {
+	margin: 50px auto;
+}
+
+#landing select {
+	font-size: 32px;
+	padding: 5px;
+}
+
+/* @end Landing */
+
+/* @group Page Layout */
+#site-container {
+	width: 990px;
+	text-align: left;
+	margin: 10px auto;
+}
+
+#main {
+	background: #fff url(../i/tile.gif) repeat-y;
+	margin-bottom: 10px;
+}
+
+#primary {
+	float: left;
+	width: 630px;
+	padding-bottom: 20px;
+}
+
+#secondary {
+	float: right;
+	width: 310px;
+}
+
+.wrap-all {
+	margin: 0 auto;
+	overflow: hidden;
+	font-family:"Myriad Pro",arial,helvetica,sans-serif;
+}
+
+.wrap-inner {
+	margin: 10px;
+}
+
+.wrap-primary {
+	width: 630px;
+	overflow: hidden;
+}
+
+.wrap-primary h2 {
+	margin-bottom: 0.5em;
+}
+
+.wrap-primary p, .wrap-primary li {
+	line-height: 1.6em;
+}
+
+/* @group Sub Nav */
+
+#sub-nav {
+	background: #efefef;
+	padding: 20px 0;
+}
+
+#sub-nav li {
+	background: #efefef;
+}
+
+.first {
+	border-top: 1px solid #e0e0e0;
+}
+
+.first a {
+	border-top: 1px solid #fff;
+}
+
+#sub-nav a {
+	background: url(../i/sub-nav-tile.gif) repeat-x 0 100%;
+	border-bottom: none;
+	color: #666;
+	display: block;
+	font-size: 13px;
+	text-align: left;
+	line-height: 2.5em;
+	padding-left: 20px;
+}
+
+#sub-nav a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+
+#sub-nav a#sub-selected {
+	background-color: #fff;
+	color: #333;
+	font-weight: bold;
+}
+
+/* @end */
+
+/* @group Section */
+.section {
+	border: 1px solid #ccc;
+	margin-bottom: 0px;
+	border-top:0px;
+	background:#ffffff;
+}
+
+.section h2 {
+	background-color: #C42D4A;
+	text-align:left;
+	color:#ffffff;
+	font-weight:normal;
+	font-size:18px;
+	padding:4px 8px;
+	margin:0px;
+}
+
+.section img {
+	border: 1px solid #cfcfcf;
+	padding: 2px;
+}
+
+/* @end Section */
+
+/* @group Content */
+.content h1 {
+}
+
+/* @end Content */
+
+/* @group Book Tickets Now */
+#book-tickets-now {
+	background: url(../i/book-tickets-now.gif) no-repeat;
+	display: block;
+	height: 42px;
+	width: 291px;
+	text-indent: -9999px;
+	margin: 0 auto;
+}
+a#book-tickets-now:hover {
+	background-position: 0 -42px;
+}
+
+/* @end Book Tickets Now */
+
+
+
+/* @group Masthead */
+#masthead {
+	background: url(../i/top.gif) no-repeat;
+	margin-bottom: 10px;
+	padding: 15px 20px 0 20px;
+	padding-top: 95px;
+	position: relative;
+}
+
+#masthead h1 {
+	height: 61px;
+	width: 163px;
+	margin: 0;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+#masthead h1 a {
+	display: block;
+}
+
+.logo {
+	    display: block;
+    height: 180px;
+    margin-left: -50px;
+    position: absolute;
+    top: 43px;
+}
+
+/* @end Masthead */
+
+/* @group Intro */
+#intro {
+	background: #fff url(../i/intro-tile.gif) repeat-x 0 100%;
+	height: 36px;
+	width: 780px;
+	position:absolute;
+	right: 0;
+	top: 50px;
+}
+
+#intro p {
+	background: url(../i/intro-end.gif) no-repeat;
+	padding-left: 20px;
+	height: 100%;
+	margin: 0;
+}
+
+#intro p span {
+	background: url(../i/intro-star.gif) no-repeat 0 50%;
+	color: #666;
+	display: block;
+	float: left;
+	font-size: 18px;
+	padding-left: 20px;
+	padding-top: 5px;
+	margin-right: 5px;
+}
+
+#intro p a {
+	display: block;
+	float: left;
+	margin-top: 10px;
+	padding: 0 2px;
+}
+
+/* @end Intro */
+
+/* @group Nav */
+#nav {
+	background: #00325a url(../i/nav-tile.gif) repeat-x;
+}
+
+#nav div {
+	background: url(../i/nav-left.gif) no-repeat;
+	padding-left: 10px;
+}
+
+#nav div ul {
+	background: url(../i/nav-right.gif) no-repeat 100% 0;
+	padding-right: 10px;
+	width: 930px;
+	overflow: hidden;
+}
+
+#nav li {
+	float: left;
+}
+
+#nav a {
+	color: #ebebeb;
+	display: block;
+	text-transform: uppercase;
+	line-height: 3em;
+	padding: 0 10px;
+	text-decoration: none;
+}
+
+a#selected, #nav a:hover {
+	background: #002447 url(../i/nav-selected-tile.gif) repeat-x;
+	color: #fff;
+}
+/* @end Nav */
+
+/* @group Home Ads */
+#home-ads {
+	float: left;
+	width: 230px;
+}
+
+/* @end Home Ads */
+
+/* @group Staff Pick */
+#staff-pick {
+	float: right;
+	height: 263px;
+	width: 388px;
+}
+
+#staff-pick ul {
+	margin: 20px;
+}
+
+#staff-pick h3 {
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+#staff-pick p {
+	margin: 0 0 5px 0;
+}
+
+#staff-pick li {
+	margin-left: 120px;
+}
+
+#staff-pick li#staff-thumbnail {
+	float: left;
+	margin-left: 0;
+}
+
+#rating {
+	background-image: url(../i/stars.gif);
+	background-repeat: no-repeat;
+	height: 11px;
+	width: 55px;
+}
+.stars-1 {
+	background-position: 0 -44px;
+}
+.stars-2 {
+	background-position: 0 -33px;
+}
+.stars-3 {
+	background-position: 0 -22px;
+}
+.stars-4 {
+	background-position: 0 -11px;
+}
+.stars-5 {
+	background-position: 0 0;
+}
+
+/* @end Staff Pick */
+
+/* @group Showtimes */
+
+#showtimes {
+}
+
+#date-select {
+	background: #efefef;
+	border-bottom: 1px solid #ccc;
+	width: 628px;
+	overflow: hidden;
+}
+
+#date-select p {
+	color: #666;
+	float: left;
+	font-weight: bold;
+	line-height: 2em;
+	padding-left: 5px;
+}
+
+#date-select form {
+	float: right;
+	margin: 2px 2px 2px 0;
+}
+
+#date-select select {
+	font-size: 11px;
+	padding: 2px;
+}
+
+#showtimes ol {
+	margin: 10px;
+}
+
+#showtimes ol li {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+
+/* @group Movie */
+.movie {
+	width: 610px;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 10px;
+	padding-top: 10px;
+}
+
+.movie img {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.movie h3 {
+}
+
+.movie h3 a {
+	color: #103253;
+	font-size: 24px;
+	font-weight: normal;
+	line-height:2em;
+}
+
+.movie p {
+	margin: 0 0 5px 0;
+}
+
+.featured {
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+}
+
+.featured-content {
+	margin: 20px;
+}
+
+.featured h2 {
+	color: #666;
+	font-size: 12px;
+	margin-bottom: 1em;
+}
+
+.featured img {
+	border: 5px solid #fff;
+}
+
+
+/* @end Movie */
+
+
+
+.times {
+	border: 1px solid #ccc;
+	padding: 1px;
+}
+
+.times table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.times th, .times td {
+	border: 1px solid #fff;
+	line-height: 2em;
+}
+
+.times th {
+	background-color: #f2f2f2;
+	font-weight: normal;
+	width: 170px;
+	text-align: left;
+	padding-left: 5px;
+}
+
+.times td {
+	background: #efefef;
+	text-align: center;
+}
+
+.times td a {
+	color: #666;
+	display: block;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.times td a:hover {
+	background: #666;
+	color: #fff;
+}
+
+.times td a.mz {
+	background: #fdf9db url(../i/mz.gif) no-repeat 99% 1px;
+	color: #333;
+}
+
+.times td a.mz:hover {
+	background: #666 url(../i/mz-hover.gif) no-repeat 99% 1px;
+	color: #fff;
+}
+
+/* @group Booking Details */
+
+.booking-details {
+	border: 1px solid #ccc;
+	padding: 0px;
+	margin-bottom: 10px;
+}
+.booking-details form {
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+.booking-details li {
+	width: 560px;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+.booking-details label {
+	display: block;
+	float: left;
+	font-size: 14px;
+	padding-right: 10px;
+	text-align: right;
+	width: 180px;
+}
+.booking-details select {
+	font-size: 14px;
+	padding: 2px;
+	width: 180px;
+}
+
+.booking-details h4 {
+	color: #666;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+#month, #year {
+	width: 117px;
+}
+
+.booking-note {
+	color: #666;
+	display: block;
+	margin-left: 190px;
+	font-style: italic;
+}
+/* @end Booking Details */
+
+/* @group Order Details */
+
+#order-details {
+	background-color: #f2f2f2;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
+#order-details h4 {
+	color:#666666;
+	font-size:14px;
+	margin-bottom: 10px;
+}
+
+#order-details th, #order-details td {
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	padding: 5px;
+}
+
+/* @end Order Details */
+
+/* @group Seats */
+#seats {
+	background-color: #f2f2f2;
+	border: 1px solid #ccc;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+/* @end Seats */
+
+/* @end Showtimes */
+
+/* @group New This Week */
+#new-this-week {
+	padding: 20px;
+}
+
+#new-this-week ul {
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+#new-this-week li {
+	border-bottom: 1px solid #efefef;
+	width: 270px;
+	overflow: hidden;
+}
+
+#new-this-week li a {
+	color: #103253;
+	font-weight: normal;
+}
+
+.new-title {
+	display: block;
+	float: left;
+	line-height: 2em;
+}
+
+.new-details {
+	float: right;
+	padding-top: 4px;
+}
+
+.new-details a {
+	display: block;
+	float: left;
+	height: 16px;
+	width: 16px;
+	margin-right: 5px;
+	text-indent: -9999px;
+}
+
+.new-details a.info {
+	background: url(../i/movie-info.gif)
+}
+
+.new-details a.trailer {
+	background: url(../i/view-trailer.gif)
+}
+
+.new-details a:hover {
+	background-position: 0 -16px;
+}
+
+/* @end New This Week */
+
+/* @group ft */
+#ft {
+	background: #fff url(../i/tile.gif) repeat-y;
+}
+
+#ft .wrap-all {
+	padding-top: 5px;
+}
+
+#ft li {
+	line-height: 2em;
+}
+
+#ft a {
+	color: #333;
+	font-weight: normal;
+}
+
+#ft h4 {
+	margin: 0;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+}
+
+.ft-col {
+	width: 203px;
+}
+
+/* @end ft */
+
+/* @group ft-comp */
+#ft-comp {
+	width: 203px;
+	overflow: hidden;
+}
+
+#ft-comp img {
+	float: left;
+	display: block;
+	margin: 0 10px 40px 0;
+}
+
+#ft-comp p {
+	margin: 0 0 5px 0;
+}
+
+#ft-comp a {
+	font-weight: bold;
+}
+
+/* @end ft-comp */
+
+/* @group ft-connect */
+#ft-connect li {
+	padding-left: 22px;
+}
+#yt {
+	background:url(../i/youtube.png) no-repeat 0 50%;
+}
+#fb {
+	background:url(../i/facebook.png) no-repeat 0 50%;
+}
+#bb {
+	background:url(../i/bebo.png) no-repeat 0 50%;
+}
+#tt {
+	background:url(../i/twitter.png) no-repeat 0 50%;
+}
+/* @end ft-connect */
+
+/* @group ft-contact */
+#ft-contact {
+	background-color: #f2f2f2;
+	padding: 10px;
+}
+.adr {
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+.adr p {
+	margin: 0;
+}
+
+/* @end ft-contact */
+
+/* @group Copyright */
+#copyright {
+	color: #666;
+	padding: 20px 0 50px;
+	text-align: center;
+}
+
+#copyright p {
+	margin-bottom: 10px;
+}
+
+#copyright p a {
+	color: #666;
+	font-weight: normal;
+}
+
+#copyright p a:hover {
+	color: #333;
+}
+
+/* @end Copyright */
+
+/* @group Mezz */
+#mezz-screenshots {
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	background: #efefef;
+	padding: 10px;
+	text-align:center;
+	width: 290px;
+}
+
+#slider {
+	margin-bottom: 10px;
+}
+
+#slider-wrap {
+	overflow: hidden;
+}
+
+#slider-wrap ul {
+	overflow:hidden;
+}
+
+#slider-wrap li {
+	height: 170px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 290px;
+}
+/* @end Mezz */
+
+/* @group Index Item */
+
+.index-item {
+	margin-top: -10px;
+}
+
+.index-item li {
+	border-bottom: 1px solid #efefef;
+	padding-bottom: 15px;
+}
+
+.index-item-content {
+	margin: 1em 1em 0 1em;
+	position: relative;
+	overflow: hidden;
+}
+
+.index-item .thumbnail {
+	display: block;
+	float: left;
+	margin: 0 20px 30px 0;
+}
+
+.index-item h2 a {
+	color: #103253;
+	font-weight: normal;
+}
+
+.index-item p {
+	margin-bottom: 5px;
+}
+
+/* @end Index Item */
+
+
+/* @group Map */
+#map {
+	background: #f2f2f2;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+/* @end Map */
+
+/* @group Prices */
+.prices {
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.prices h3 {
+	color: #666;
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+.prices table {
+	width: 590px;
+}
+
+.prices th, .prices td {
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	font-size: 10px;
+	padding: 2px 2px;
+	text-align: center;
+}
+
+.prices th {
+	color: #000;
+}
+
+.prices th.align-left {
+	text-align: left;
+	padding-left: 5px;
+}
+
+.prices ol {
+	border-top: 1px solid #ccc;
+	padding-top: 10px;
+	list-style-position:inside;
+}
+
+/* @end Prices */
+
+/* @group Brannigan Meal Deals */
+.md-content {
+	margin-left: 120px;
+}
+
+.md-price {
+	background: url(../i/tag_yellow.png) no-repeat 0 50%;
+	padding-left: 20px;
+	font-style: italic;
+}
+
+#md-brannigans li {
+	border-bottom: none;
+	margin-bottom: 10px;
+	padding-left: 40px;
+}
+
+#b-one {
+	background: url(../i/one.png) no-repeat;
+}
+#b-two {
+	background: url(../i/two.png) no-repeat;
+}
+#b-three {
+	background: url(../i/three.png) no-repeat;
+}
+
+#md-brannigans h3 {
+	color: #103253;
+	font-size: 12px;
+	font-weight: normal;
+	margin: 0;
+}
+
+#md-brannigans p {
+	margin: 0;
+}
+
+.md-note {
+	color:#999999;
+	font-family:Georgia,serif;
+	font-style:italic;
+}
+
+/* @end */
+
+/* @group Coming Soon */
+
+.cs-content {
+	margin-left: 110px;
+}
+
+.cs-content th {
+	padding-right: 10px;
+}
+
+/* @end */
+
+/* @group Kids Club */
+
+#kids-club li {
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+#kids-club li h3 {
+	margin-bottom: 5px;
+}
+
+/* @end Kids Club */
+
+
+/* @group Contact */
+
+.vcard {
+	font-size: 14px;
+}
+
+.org {
+	color: #000;
+}
+
+.adr a {
+	color: #333;
+	font-weight: normal;
+}
+
+#get-in-touch {
+	width: 75%;
+}
+
+#get-in-touch th {
+	width: 120px;
+}
+
+#get-in-touch a {
+	color: #333;
+	font-weight: normal;
+}
+
+#get-in-touch p {
+	color:#999;
+	font-family: Georgia, serif;
+	font-style: italic;
+}
+
+/* @end Contact */
+
+
+/* @group Important */
+
+.important {
+	margin-left: 120px;
+	width: 75%;
+}
+
+.important h3 {
+	background: url(../i/alert.gif) no-repeat 0 50%;
+	border-bottom: 1px solid #e2dab2;
+	color: #9f8400;
+	font-size: 12px;
+	line-height: 2em;
+	padding-left: 15px;
+}
+
+.important ol {
+	list-style-position: inside;
+}
+
+.important li {
+	border-bottom: 1px solid #efefef;
+	line-height: 2em;
+}
+
+/* @end */
+
+/* @group Icon Block */
+
+.icon-block img {
+	display: block;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.icon-block h2 {
+	color: #9F8400;
+	font-family: Georgia;
+	font-style: italic;
+}
+
+/* @end Icon Block */
+
+/* @group Comp Enter */
+#comp-enter {
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+	padding: 20px;
+}
+
+#comp-enter p {
+	font-size: 18px;
+	font-weight: normal;
+	
+}
+
+#comp-enter fieldset label {
+	padding-right: 10px;
+}
+
+#comp-enter li {
+	border-bottom: 1px solid #e5e5e5;
+	padding: 10px 0;
+}
+
+#comp-enter li label {
+	display: block;
+	float: left;
+	width: 110px;
+	text-align: left;
+}
+
+#comp-enter li input {
+	width: 200px;
+}
+
+#comp-enter-btn {
+	margin: 0 0 10px 108px;
+}
+/* @Form Styles */
+.styletext{
+	background:#FFFFFF;
+	border: thin #00325a solid;
+}
+/* @end Form Styles */
+
+/* @end Comp Enter */
+
+form h4 {
+	border:solid #cccccc;
+	border-width:0px 0px 1px 0px;
+	padding-bottom:6px;
+}
+
+
+
+
+
+body {
+	padding:0px;
+	margin:0px;
+	font-size:14px;
+	font-family:arial,helvetica,sans-serif;
+	background-color:#000;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+	font-family:arial,helvetica,sans-serif;
+	margin:0px;
+}
+
+h1         {margin:10px 0px; padding:0px; position:relative; z-index:10; font-size:28px; color:#71386A; font-weight:bold;}
+h1 img     {margin:auto; clear:both; margin-bottom:30px; }
+
+h2 {font-weight:normal; font-size:20px; margin-bottom:0.3em; color:#71386A;}
+h3 {font-weight:normal; font-size:18px; margin-bottom:0.3em; margin-top:0.3em; color:#71386A; }
+h4 {font-weight:bold; font-size:1.2em; margin-bottom:0.3em}
+h5 {font-weight:bold; font-size:1.0em; margin-bottom:0.3em}
+
+li {margin-bottom:5px}
+
+img {
+	border:none;
+}
+
+.sidebar     {color:#fff; background:#B02040 url('/sites/sucre/images/grad.png') repeat-x; padding:10px; margin-bottom:10px;} 
+
+div#mainWrapper {
+	width:954px;
+	margin:auto;
+}
+
+.movieData {
+	float:right; 
+	font-size:14px; 
+	font-family:"Myriad","Myriad Pro",arial,helvetica,sans-serif; 
+	margin-top:9px;
+	text-align:right;
+}
+
+.runtimeWrapper, .ratingWrapper { margin:0px 6px; float:left; }
+
+
+/* HEADER */
+
+div#headerWrapper {
+	width:954px;
+	height:150px;
+	margin:auto;
+}
+
+.headerTable {
+	width:954px;
+	height:248px;
+	margin:auto;
+	/*background:url('/sites/sucre/images/fons_cap.jpg') repeat-x;*/
+}
+
+.site
+{
+	font-size:56px;
+	line-height:47px;
+	font-weight:bold;
+	color:#ffffff;
+	font-family:"Myriad","Myriad Pro",arial,helvetica,sans-serif; 
+}
+.phone
+{
+	font-size:24px;
+	line-height:35px;
+	font-weight:bold;
+	color:#ffffff;
+	font-family:"Myriad","Myriad Pro",arial,helvetica,sans-serif; 
+}
+
+
+div#bodyWrapper {
+	/*background-image:url('/sites/sucre/images/fons_cortines.jpg');*/
+	background-repeat: no-repeat;
+	background-position: center top;
+	width: 100%;
+	margin:auto;
+}
+
+
+div#contentWrapper {
+	width:954px;
+	margin:auto;
+}
+
+
+/* SHOWTIMES */
+
+table.tableWrapper {
+	width:100%;
+	background:#ffffff;
+	padding:0px;
+	border-collapse:collapse;
+	clear:both;
+}
+
+table.tableWrapper table {
+	width:100%;
+	border-collapse:collapse;
+}
+
+table.tableWrapper th {
+	background-color: #C42D4A;
+	text-align:left;
+	color:#ffffff;
+	font-weight:normal;
+	font-size:18px;
+	padding:4px 8px;
+	margin:0px;
+}
+
+table.tableWrapper td {
+	border:1px solid #cccccc;
+	border-top:0px;
+}
+
+div.tableShowingsWrapper {
+	padding:8px;
+}
+
+div.tableShowingsWrapper.even {
+	background-color:#eeeeee;
+}
+
+table.tableShowings td {
+	border:0px;
+	vertical-align:bottom;
+	text-align:left;
+}
+
+table.tableShowings td.moviePoster {
+	vertical-align:top;
+	padding-right:8px;
+	width:1px;
+}
+
+table.tableShowings td.moviePoster img {
+	width:94px;
+}
+
+table.tableShowings td.movieTitle {
+	height:42px;
+	font-size:24px;
+}
+
+table.tableShowings td.movieInfo {
+	font-family:"Myriad Pro",arial,helvetica,sans-serif;
+	font-size:11px;
+	height:1px;
+	padding-bottom:8px;
+}
+
+table.tableShowings td.movieTimes {
+	height:1px;
+	background:#ffffff;
+	padding:4px;
+	border:1px solid #cccccc;
+}
+
+table.tableShowings td.movieTimes td {
+	text-align:center;
+	padding:8px;
+}
+
+table.tableShowings td.movieTimes td a { 
+	color:#015585; 
+	display:block; 
+	font-size:12px; 
+	text-decoration:none; 
+}
+
+table.tableShowings td.movieTimes td a div.movieTime { 
+	line-height:0.9em; 
+	font-size:24px; 
+	font-weight:bold; 
+	font-family:"MyriadPro-Bold","Myriad Pro Bold","Myriad Pro",arial,helvetica,sans-serif; 
+}
+
+table.tableShowings td.movieTimes td.soldOut { 
+	color:#cc0000; 
+	display:block; 
+	font-size:12px; 
+	text-decoration:none; 
+}
+
+table.tableShowings td.movieTimes td.soldOut div.movieTime { 
+	color:#cc0000; 
+	line-height:0.9em; 
+	font-size:24px; 
+	font-weight:bold; 
+	font-family:"MyriadPro-Bold","Myriad Pro Bold","Myriad Pro",arial,helvetica,sans-serif; 
+}
+
+table.tableShowings td.movieTimes table { 
+	width:100%; 
+}
+
+table.tableShowings td.movieTimes tr.odd { 
+	background:#c9ebf5; 
+}
+
+
+
+
+div#movieTimesNavWrapper {
+	text-align:left;
+}
+
+div#movieTimesNavWrapper h3 {
+	padding-left:8px;
+	position:absolute;
+	font-size:18px;
+	background:url('/sites/sucre/images/arrows.png') no-repeat right bottom;
+	padding-right:18px;
+	float:left;
+	margin-top:20px;
+}
+
+div#movieTimesNav {
+	float:right;
+	width:576px;
+}
+
+ul.tabs {
+	margin-left: 0;
+	padding-left: 0;
+	display: inline;
+} 
+
+.tabs li {
+	margin-left: 1px;
+	padding: 0px 0px;
+	width:71px;
+	height:46px;
+	list-style: none;
+	display: block;
+	float:left;
+	background:url("/sites/sucre/images/tab-inactive.png") no-repeat;
+	color:#ffffff;
+	text-align:left;
+}
+
+.tabs li .day {
+	margin:5px 0px 0px 8px;
+	font-size:18px;
+	height:1.2em;
+}
+
+.tabs li .date {
+	margin:0px 0px 0px 8px;
+	font-size:14px;
+	line-height:0.9em;
+}
+
+.tabs li a {
+	color:#ffffff;
+	text-decoration:none;
+}
+	
+ul.tabs li.tab-active {
+	background:url("/sites/sucre/images/tab-active.png") no-repeat;
+}
+
+ul.tabs li.tab-alt {
+	background:url("/sites/sucre/images/tab-alt.png") no-repeat;
+}
+
+
+/* HOMEPAGE BANNER */
+
+#homeBannerWrapper {
+	margin:0px 9px;
+	border-bottom:1px solid #666666;
+}
+
+#homeBannerShadow {
+	background:url('/sites/sucre/images/content-shadow.png') repeat-x;
+	position:absolute;
+	height:20px;
+	margin-left:-9px;
+	width:954px;
+	clear:right;
+}
+
+#homeBannerWrapper a {
+	color:#ffffff;
+	text-decoration:none;
+}
+
+#homeBanner {
+	height:287px;
+	text-align:left;
+}
+
+#homeBannerImage {
+	position:absolute; 
+	height:287px; 
+	width:964px; 
+}
+
+#homeBannerCaptionWrapper { 
+	background:url('/sites/sucre/images/hb-dark.png') repeat-x; 
+	height:63px; 
+	width:900px;
+	position:absolute;
+	margin-top:224px;
+	text-align:left;
+	color:#ffffff;
+	padding:6px 18px 0px 18px;
+	cursor:hand;
+}
+
+#homeBannerCaption {
+	width:410px;
+}
+
+#homeBannerCaption h2 {
+	margin:0px;
+	font-size:24px;
+	height:1.2em;
+	overflow:hidden;
+	cursor:hand;
+}
+
+#homeBannerCaption p {
+	margin:0px;
+	padding-right:24px;
+	font-family:"Myriad Pro",arial,helvetica,sans-serif;
+	font-size:15px;
+	background:url('/sites/sucre/images/hb-button.png') no-repeat right; 
+	float:left;
+	height:1.2em;
+	overflow:hidden;
+	cursor:hand;
+}
+
+#homeBannerRight {
+	background:url('/sites/sucre/images/hb-light.png') repeat-y right; 
+	height:287px; 
+	width:394px;
+	position:absolute;
+	margin-left:570px;
+	text-align:right;
+}
+
+#homeBannerPreviewsWrapper {
+	margin-left:84px;
+	width:310px;
+}
+
+#homeBannerPreviews {
+	position:absolute;
+	left:90px;
+	top:5px;
+	width:300px;
+	height:205px;
+	background-image:url('/sites/sucre/images/preview_bg.png');
+	background-repeat:no-repeat;
+}
+
+#homeBannerPreviewCaptionWrapper { 
+	height:32px; 
+	width:290px;
+	left:-8px;
+	top:153px;
+	position:absolute;
+	text-align:left;
+	color:#ffffff;
+	cursor:hand;
+}
+
+#homeBannerPreviewCaption {
+	width:215px;
+	padding:1px 0px 0px 4px;
+	float:left;
+}
+
+#homeBannerPreviewCaption h2 {
+	margin:0px;
+	font-size:14px;
+	height:1.2em;
+	overflow:hidden;
+	cursor:hand;
+	width:215px;
+}
+
+#homeBannerPreviewCaption p {
+	margin:0px;
+	padding-right:0px;
+	font-family:"Myriad Pro",arial,helvetica,sans-serif;
+	font-size:10px;
+	float:left;
+	height:1.2em;
+	overflow:hidden;
+	cursor:hand;
+	width:215px;
+}
+
+#homeBannerBook {
+	position:absolute;
+	left:99px;
+	top:214px;
+}
+
+#homeBannerNav {
+	position:absolute;
+	margin-left:480px;
+	top:365px;
+}
+
+.homeBannerNavPoster {
+	height:79px; 
+	border:none; 
+	float:left; 
+	margin-left:2px;
+}
+
+#homeBannerNav a:hover img {
+	border:1px solid #ffffff; 
+}
+
+/* news and events */
+
+div.tableNewsWrapper {
+	padding:8px;
+}
+
+table.tableNews +table.tableNews {
+	margin-top:8px;
+	border-top:1px solid #cccccc;
+}
+
+table.tableNews +table.tableNews td {
+	padding-top:9px;
+}
+
+table.tableNews td {
+	border:0px;
+	vertical-align:top;
+	text-align:left;
+}
+
+table.tableNews td.moviePoster {
+	vertical-align:top;
+	padding-right:8px;
+	width:1px;
+}
+
+table.tableNews td.moviePoster img {
+	width:94px;
+}
+
+table.tableNews td.newsItem {
+	font-family:"Myriad Pro",arial,helvetica,sans-serif;
+	font-size:11px;
+	height:1px;
+	padding-bottom:8px;
+}
+
+table.tableNews td.newsItem h3 {
+	font-family:"Myriad Pro",arial,helvetica,sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	line-height:1em;
+	margin-bottom:3px;
+}
+
+table.tableNews td.newsItem a {
+	font-weight:bold;
+	color:#333333;
+	text-decoration:none;
+}
+
+
+
+/* features */
+
+div.tableFeaturesWrapper {
+	padding-right:9px;
+}
+
+table.tableFeatures td {
+	border:0px;
+	vertical-align:top;
+	text-align:left;
+	width:25%;
+}
+
+table.tableFeatures td.featureImage {
+	vertical-align:top;
+	padding-right:8px;
+	width:1px;
+}
+
+table.tableFeatures td.featureImage img {
+	width:97px;
+	margin-left:9px;
+}
+
+table.tableFeatures td.featureItem {
+	font-family:"Myriad Pro",arial,helvetica,sans-serif;
+	font-size:11px;
+	height:1px;
+	padding-top:12px;
+}
+
+table.tableFeatures td.featureItem h3 {
+	font-family:"Myriad Pro",arial,helvetica,sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	line-height:1em;
+	margin-bottom:3px;
+}
+
+table.tableFeatures td.featureItem a {
+	font-weight:bold;
+	color:#333333;
+	text-decoration:none;
+}
+
+.cap_fons {
+	background-image: url(/sites/sucre/images/fons_cap.jpg);
+	height: 248px;
+	width: 954px;
+}
+.cont_fons_cortines {
+	background-image: url(/sites/sucre/images/fons_cortines.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	width: 100%;
+}
+.cont_fons_pantalla_home {
+	background-image: url(/sites/sucre/images/fons_pantalla_home.jpg);
+	background-repeat: repeat-y;
+	width: 954px;
+}
+.cont_fons_llums_esq_home {
+	background-image: url(/sites/sucre/images/fons_pantalla_cartellera.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+	width: 554px;
+}
+.cont_fons_llums_dret_home {
+	background-image: url(/sites/sucre/images/fons_pantalla_banners_home.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+	width: 390px;
+}
+.cartellera_fons_pantalla {
+	background-image: url(/sites/sucre/images/fons_pantalla_fitxa.jpg);
+	background-repeat: repeat-y;
+	width: 954px;
+}
+.cartellera_fons_llums {
+	background-image: url(/sites/sucre/images/fons_llums_fitxa.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+	width: 954px;
+}
+.zona_fons_pantalla {
+	background-image: url(/sites/sucre/images/fons_pantalla_zones.jpg);
+	background-repeat: repeat-y;
+	width: 954px;
+}
+.zona_fons_llums_esq {
+	background-image: url(/sites/sucre/images/fons_llums_zones_esq.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+	width: 711px;
+}
+.zona_fons_llums_dret {
+	background-image: url(/sites/sucre/images/fons_llums_zones_dret.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+	width: 235px;
+}
+.zona_titols {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #333;
+	text-decoration: none;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #333;
+	font-weight: bold;
+}
+.zona_menu {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #666;
+	text-decoration: none;
+	background-image: url(/sites/sucre/images/trianglet_fosc.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: inline-block;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #333;
+	font-size: 12px;
+	padding-left: 10px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #333;
+	border:2px solid #fff;
+	font-weight:normal;
+}
+a.zona_menu:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333;
+	text-decoration: none;
+	background-image: url(/sites/sucre/images/trianglet_blanc.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: inline-block;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #FFF;
+	font-size: 12px;
+	padding-left: 10px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #FFF;
+	background-color: #CCC;
+	font-weight:normal;
+}
+.zona_data {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #333;
+}
+.zona_titol_noticia {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+}
+a.zona_titol_noticia:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+	text-decoration: none;
+}
+.zona_text_noticia {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+	text-decoration: none;
+}
+a.zona_text_noticia:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666;
+	text-decoration: none;
+}
+
+.peu_fons {
+	background-image: url(/sites/sucre/images/fons_peu.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 166px;
+	width: 954px;
+}
+.peu_text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #CCC;
+	text-decoration: none;
+}
+a.peu_text:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	text-decoration: none;
+}
+.peu_linia_esq {
+	border-left-width: 1px;
+	border-left-style: dotted;
+	border-left-color: #666;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #CCC;
+}
+
+.menu_fons {
+	background-image: url(/sites/sucre/images/fons_menu.jpg);
+	height: 32px;
+	width: 954px;
+}
+.menu_superior {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFF;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #666;
+	border-left-color: #333;
+	height: 10px;
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
+a.menu_superior:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFF;
+	text-decoration: none;
+	display: inline-block;
+	background-image: url(/sites/sucre/images/fons_menu_actiu.jpg);
+	background-repeat: repeat-x;
+	background-position: center;
+}
+.trailer_titol {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	color: #FFF;
+	text-decoration: none;
+}
+.trailer_data {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #CCC;
+	text-decoration: none;
+}
+.trailer_fons_esq {
+	background-image: url(/sites/sucre/images/suport_tiols_pelis__fons_esq.jpg);
+	background-repeat: repeat-y;
+}
+.trailer_fons_dret {
+	background-image: url(/sites/sucre/images/suport_tiols_pelis__fons_dret.jpg);
+	background-repeat: repeat-y;
+}
+.trailer_fons {
+	background-image: url(/sites/sucre/images/suport_tiols_pelis_fons.gif);
+	background-repeat: repeat;
+}
+.cartellera_titol_peli {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+}
+a.cartellera_titol_peli:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #666;
+	text-decoration: none;
+}
+
+.cartellera_data {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333;
+	text-decoration: none;
+}
+.titols {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #333;
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #666;
+}
+.noticies {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+	text-decoration: none;
+}
+a.noticies:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666;
+	text-decoration: none;
+}
+.espectador_fons {
+	background-image: url(/sites/sucre/images/banner_espectador.gif);
+	width: 165px;
+	height: 113px;
+}
+.espectador_fons_sucre {
+	background-image: url(/sites/sucre/images/fons_especatador.jpg);
+	width: 192px;
+	height: 113px;
+}
+.espectador_titol {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FFF;
+	font-weight: bold;
+}
+.espectador_text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+}
+.espectador_text_petit {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFF;
+}
+.newsletter_fons {
+	background-image: url(/sites/sucre/images/fons_newsletter.jpg);
+	background-repeat: no-repeat;
+	height: 133px;
+	width: 349px;
+}
+.newsletter_titol {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+.newsletter_text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+.newsletter_text_petit {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333;
+}
+.newsletter_caixa {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+	background-color: #FFF;
+	border: 1px solid #666;
+}
+.newsletter_boto {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+	background-color: #F90;
+}
+.text_14 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+}
+.submenu_superior {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #CCC;
+	text-decoration: none;
+	background-color: #333;
+	background-image: url(/sites/sucre/images/trianglet.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: inline-block;
+	width: 100%;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #FFF;
+}
+a.submenu_superior:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FFF;
+	text-decoration: none;
+	background-color: #666;
+	background-image: url(/sites/sucre/images/trianglet.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: inline-block;
+	width: 100%;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #FFF;
+}
+.cartellera_titol_peli_16 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #333;
+	text-decoration: none;
+	font-weight: bold;
+}
+.cartellera_data_12 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+.text_12 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333;
+	text-decoration: none;
+	font-size: 12px;
+}
+.horari_titol {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+	text-decoration: none;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: dotted;
+	border-top-color: #666;
+	border-bottom-color: #666;
+}
+.b_comprar {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+a.b_comprar:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFF;
+	text-decoration: none;
+	background-color: #000;
+	display: inline-block;
+}
+.b_comprar_marc {
+	border: 1px dotted #999;
+	background-color: #FFF;
+}
+.welcome_fons {
+	background-color: #000;
+	background-image: url(/sites/sucre/images/welcome_cortines.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+}
+.welcome_fons_pantalla {
+	background-image: url(/sites/sucre/images/welcome_pantalla.jpg);
+	background-repeat: no-repeat;
+	height: 349px;
+	width: 712px;
+	clip: rect(auto,auto,auto,auto);
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+}
+.welcome_cortines {
+	width: 732px;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+}
+.welcome_butaques {
+	width: 752px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFF;
+	text-decoration: none;
+	background-color: #333;
+	padding: 5px;
+	text-align: center;
+	display: inline-block;
+}
+a.link:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFF;
+	text-decoration: none;
+	background-color: #999;
+	padding: 5px;
+	text-align: center;
+	display: inline-block;
+}
+.peu_text-credits {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000;
+	text-decoration: none;
+}
+a.peu_text-credits:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000;
+	text-decoration: none;
+}
+.website_titols {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #666;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666;
+}
+.website_text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+	text-decoration: none;
+}
+a.website_text:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+	text-decoration: underline;
+}.website_linia_inf {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666;
+}
+.idioma {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666;
+	text-decoration: none;
+}
+a.idioma_hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000;
+	text-decoration: none;
+}
+.b_preu {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+	display: inline-block;
+	height: 20px;
+	width: 100%;
+	padding-top: 3px;
+	font-weight: bold;
+	border: 1px solid #854B12;
+}
+a.b_preu:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+	display: inline-block;
+	height: 20px;
+	width: 100%;
+	font-weight: bold;
+	background-color: #512E0B;
+	border: 1px solid #000;
+}
+.b_preu_fons {
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 20px;
+	width: 100%;
+	margin-top: 5px;
+	background-color: #854B12;
+	border: 1px solid #854B12;
+}
+.enquesta {
+	background-image: url(//sites/sucre/images/fons_taronja.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.topten {
+	background-image: url(//sites/sucre/images/fons_taquilla.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fons_noticies_home {
+	background-image: url(/sites/sucre/images/fons_noticies.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.titol_enquesta {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 36px;
+	color: #FFF;
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #FFF;
+	font-weight: normal;
+	letter-spacing: -1px;
+	font-style: italic;
+	text-align: center;
+}
+.titol_taquilla {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 36px;
+	color: #FC6;
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #FC6;
+	font-weight: normal;
+	font-style: italic;
+	letter-spacing: -3px;
+}
+.titol_noticies_home {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 36px;
+	color: #900;
+	text-decoration: none;
+	font-weight: bold;
+	font-style: italic;
+	letter-spacing: -3px;
+	text-align: center;
+}
+.pantalla {
+	height: 21px;
+	width: 400px;
+	position: absolute;
+	z-index: 2;
+	background-color: #000;
+	background-image: url(/sites/sucre/images/pantalla_top.png);
+	background-repeat: no-repeat;
+}
+.pantalla_bottom {
+	height: 33px;
+	width: 400px;
+	position: absolute;
+	z-index: 2;
+	background-color: #000;
+	background-image: url(/sites/sucre/images/pantalla_bottom.png);
+	background-repeat: no-repeat;
+	margin-top: 197px;
+}
+.video_youtube {
+	height: 230px;
+	width: 400px;
+	z-index: 1;
+}
+.clear {
+	clear: both;
+}
+
+.menu_sup {
+	margin-left: 8px;
+}
+.menu_sup ul {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.menu_sup ul .separamenu {
+	float: left;
+	background-image: url(/sites/sucre/images/separamenu.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+.menu_sup ul .separamenu a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 30px;
+	color: #FFF;
+	text-decoration: none;
+	display: block;
+	padding-right: 81px;
+	padding-left: 81px;
+}
+.menu_sup ul .separamenu a:hover {
+	background-image: url(/sites/sucre/images/fons_menu_actiu.jpg);
+	background-repeat: repeat-x;
+	background-position: center top;
+}
+.tit_submenu {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+.banner_box {
+	padding-top: 10px;
+	padding-right: 40px;
+	padding-bottom: 40px;
+	padding-left: 40px;
+}
+.banner_box h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 36px;
+	font-weight: bold;
+	color: #333;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+}
+.banner_box h3 p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #333;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	line-height: 22px;
+	float: left;
+	width: 500px;
+	font-weight: normal;
+}
+.banner_box p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	line-height: 18px;
+	float: left;
+	width: 500px;
+}
+.banner_box .fomrulari_banner h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #333;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+.banner_box a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 25px;
+	color: #666;
+	background-image: url(/sites/sucre/images/document.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	display: block;
+	padding-left: 35px;
+	text-decoration: none;
+	float: left;
+	margin-right: 40px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	box-shadow: 2px 2px 4px #000000;
+	background-color: #FFF;
+	-moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.banner_box a:hover {
+	background-color: #CCC;
+}
+.banner_box .fomrulari_banner {
+	border: 2px dashed #999;
+	padding: 10px;
+}
+
+.fomrulari_banner .entrada {
+	float: left;
+	margin-right: 20px;
+}
+.banner_box .fomrulari_banner .entrada h4 {
+	font-size: 12px;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+.banner_box .fomrulari_banner .entrada .camp {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	background-color: #FFF;
+	height: 20px;
+	width: 180px;
+	border: 1px solid #CCC;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.banner_box .fomrulari_banner .entrada .camp2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	background-color: #FFF;
+	height: 30px;
+	width: 185px;
+	border: 1px solid #CCC;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.banner_box .foto {
+	float: left;
+	width: 300px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.banner_home {
+	text-align: left;
+	width: 349px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(/sites/sucre/images/bkg_banner_home.png);
+	background-repeat: no-repeat;
+	height: 266px;
+}
+.banner_home h2 {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 36px;
+	font-weight: bolder;
+	color: #333;
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	line-height: 30px;
+}
+.banner_home h2 a {
+	display: block;
+	height: 226px;
+	width: 309px;
+	position: absolute;
+	color: #333;
+	text-decoration: none;
+	padding: 20px;
+}
+.banner_home h2 a:hover {
+	background-image: url(/sites/sucre/images/bkg_banner_home_active.png);
+	color: #FFF;
+}
+.banner_home p {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #333;
+	margin: 0px;
+	padding: 0px;
+}
+.banner_home .text_banner {
+	padding-top: 100px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+}
+.cartellera tr td {
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	width: 115px;
+	height: 257px;
+}
+.proximament tr td {
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 0px;
+	padding-left: 20px;
+	width: 115px;
+	height: 257px;
+}
+.zero {
+	margin: 0px;
+	padding: 0px;
+	height: 0px;
+}
+.vose-text {
+	text-align: left;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+.vose-text p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #333;
+	margin: 0px;
+	padding: 0px;
+}

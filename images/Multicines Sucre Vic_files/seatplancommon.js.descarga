@@ -1,0 +1,64 @@
+//----------------------------------------------------------------------
+function updateErrorMessage(errorMessage) {
+  var divComponent  = document.getElementById("OLCT_seatPlanSeatError");
+  var textComponent = document.getElementById("OLCT_seatPlanSeatErrorText");  
+  var validMessage  = '';
+  
+  if ((divComponent != null) && (textComponent != null)) {
+    if (errorMessage == '') {
+      textComponent.style.color          = '#3c763d';
+      divComponent.style.backgroundColor = '#dff0d8';
+      divComponent.style.borderColor     = '#d0e9c6';
+      
+      if (typeof(GlobalSeatValidMessage) !=  'undefined') {
+        validMessage = GlobalSeatValidMessage;
+      } else {
+        validMessage = 'Seat selection valid.';
+      }
+      
+      textComponent.innerHTML = validMessage;      
+    } else {
+      textComponent.style.color          = '#8a6d3b';
+      divComponent.style.backgroundColor = '#fcf8e3';
+      divComponent.style.borderColor     = '#faf2cc';
+      textComponent.innerHTML = errorMessage;      
+    }
+  }      
+}
+
+var GlobalSeatPlanRulesRequest = null;
+
+//----------------------------------------------------------------------
+function checkSeatPlanRules() {
+  
+  if (GlobalCheckSeatPlanRules == false) {
+    return;
+  }
+  
+  if (GlobalSeatPlanRulesRequest != null) {
+    GlobalSeatPlanRulesRequest.abort();    
+  }
+  
+  updateErrorMessage('Validating seat selection...');
+  
+  var seatDataStr = '';
+  var perfCodeStr = GlobalPerfID;
+  
+  for (var i=0;i<GlobalSeatData.length;i++) {
+    seatDataStr += GlobalSeatData[i][0] + '=' + GlobalSeatData[i][2] + ',';
+  }  
+  seatDataStr = seatDataStr.substring(0, seatDataStr.length - 1);
+   
+  GlobalSeatPlanRulesRequest = $.post("?p=seatplancheckrules&s=" + GlobalSiteCode,   
+  
+  { perfCode: perfCodeStr, 
+    seatData: seatDataStr }, 
+                     
+  function(data) {   
+  }).done(function(data) {
+   console.log('Seat rule: ' + data);    
+   updateErrorMessage(data);
+  }).fail(function(data) {
+   //It failed
+  });  
+}
